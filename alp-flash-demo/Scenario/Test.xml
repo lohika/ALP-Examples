@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name='ALP Framework Examples'>
+	<listeners>	
+		 <listener class-name="com.lohika.alp.reporter.Reporter" />		  	
+		<listener class-name="com.lohika.alp.reporter.db.DBResultListener" />                
+	</listeners>	
+	 <groups>
+    		<run>
+      		<include name="test"/>
+    		</run>
+  		</groups>   
+	<test name='FlashTesting' timeout="1200000">					
+		<packages>			
+			 <package name="com.lohika.alp.demo.flash.tests" />
+		</packages>
+	</test>	
+</suite>
