@@ -4,7 +4,18 @@
   <artifactId>alp-flash-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>FlashDemo</name>
-  
+  <repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for maven</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository>
+		  <id>alp-repo</id>
+		  <name>ALP repository on GitHub</name>
+		  <url>https://github.com/lohika/ALP/tree/gh-pages/repo/releases/</url>
+		</repository>		
+	</repositories>
   <build>
 		<plugins>
 			<plugin>
@@ -23,12 +34,12 @@
 		<dependency>
 			<groupId>com.lohika.alp</groupId>
 			<artifactId>alp-reporter-db</artifactId>
-			<version>0.5-SNAPSHOT</version>
+			<version>0.6</version>
 		</dependency>
 	<dependency>
 			<groupId>com.lohika.alp</groupId>
 			<artifactId>alp-selenium</artifactId>
-			<version>0.5-SNAPSHOT</version>
+			<version>0.6</version>
 		</dependency>
 	</dependencies>  
 </project>
