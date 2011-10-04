@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name='Selenium CheckList'>
+<parameter name="browser"  value="chrome"/>
+<parameter name="platform"  value="LINUX"/>
+	<listeners>	
+		 <listener class-name="com.lohika.alp.reporter.Reporter" />		  	
+		<listener class-name="com.lohika.alp.reporter.db.DBResultListener" />                
+	</listeners>	
+	 <groups>
+    		<run>
+      		<include name="primary.2"/>
+    		</run>
+  		</groups>
+  	
+	<test name='SeleniumChecklist' timeout="1200000">						
+		<packages>			
+			 <package name="com.lohika.alp.sanity.selenium" />
+		</packages>
+	</test>	
+</suite>
