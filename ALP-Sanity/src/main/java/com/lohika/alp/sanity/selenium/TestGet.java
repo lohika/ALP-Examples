@@ -28,7 +28,7 @@ public class TestGet {
 		lg = Logger.getLogger(getClass().toString());
 		DesiredCapabilities cap = new DesiredCapabilities(browser, "",
 				Platform.valueOf(platform));
-		wbd = AlpWebDriverFactory.getDriver(Environment.getEnv(), cap);
+		wbd = AlpWebDriverFactory.getDriver(Environment.getHubURL(), cap);
 	}
 
 	//@Test(groups = { "test" })

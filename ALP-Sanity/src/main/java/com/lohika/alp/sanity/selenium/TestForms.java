@@ -30,7 +30,7 @@ public class TestForms {
 			throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities(browser, "",
 				Platform.valueOf(platform));
-		wbd = AlpWebDriverFactory.getDriver(Environment.getEnv(), cap);
+		wbd = AlpWebDriverFactory.getDriver(Environment.getHubURL(), cap);
 
 		fb = AlpPageFactory.initElements(wbd, FormBlock.class);
 	}

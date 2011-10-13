@@ -30,7 +30,7 @@ public class TestFindBy {
 		lg = Logger.getLogger(getClass().toString());
 		DesiredCapabilities cap = new DesiredCapabilities(browser, "",
 				Platform.valueOf(platform));
-		wbd = AlpWebDriverFactory.getDriver(Environment.getEnv(), cap);
+		wbd = AlpWebDriverFactory.getDriver(Environment.getHubURL(), cap);
 
 		fbb = AlpPageFactory.initElements(wbd, FindByBlock.class);
 	}

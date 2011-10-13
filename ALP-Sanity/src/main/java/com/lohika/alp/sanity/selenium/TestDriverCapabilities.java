@@ -30,7 +30,7 @@ public class TestDriverCapabilities {
 		DesiredCapabilities cap = new DesiredCapabilities(browser, "5.0",
 				Platform.valueOf(platform));
 
-		wbd = AlpWebDriverFactory.getDriver(Environment.getEnv(), cap);
+		wbd = AlpWebDriverFactory.getDriver(Environment.getHubURL(), cap);
 		lg = Logger.getLogger(getClass().toString());
 	}
 
