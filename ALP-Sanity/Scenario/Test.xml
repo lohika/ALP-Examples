@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name='Selenium CheckList'>
-<parameter name="browser"  value="chrome"/>
+<parameter name="browser"  value="firefox"/>
 <parameter name="platform"  value="LINUX"/>
 	<listeners>	
-		 <listener class-name="com.lohika.alp.reporter.Reporter" />		  	
-		<listener class-name="com.lohika.alp.reporter.db.DBResultListener" />                
+		 <listener class-name="com.lohika.alp.reporter.Reporter" />
 	</listeners>	
 	 <groups>
     		<run>
-      		<include name="primary.2"/>
+      		<include name="jstest"/>
     		</run>
   		</groups>
   	

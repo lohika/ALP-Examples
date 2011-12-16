@@ -2,7 +2,7 @@ package com.lohika.alp.sanity.utils;
 
 public class Environment {
 
-	private static String hubURL = "http://localhost:4444/wd/hub";
+	private static String hubURL = "http://172.24.104.93:4444/wd/hub";
 	private static String get = "http://www.google.com";
 	private static String get2 = "http://ya.ru";
 	private static String inputcheckboxes = "http://www.htmldog.com/examples/inputcheckboxes.html";
