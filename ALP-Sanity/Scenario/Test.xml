@@ -4,6 +4,7 @@
 <parameter name="platform"  value="LINUX"/>
 	<listeners>	
 		 <listener class-name="com.lohika.alp.reporter.Reporter" />
+        <listener class-name="com.lohika.alp.reporter.db.DBResultListener" />
 	</listeners>	
 	 <groups>
     		<run>

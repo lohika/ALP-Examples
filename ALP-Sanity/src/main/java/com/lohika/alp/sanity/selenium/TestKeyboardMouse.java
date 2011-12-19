@@ -38,8 +38,8 @@ public class TestKeyboardMouse {
 		//lg = Logger.getLogger(getClass().toString());
 	}
 
-	//@Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
-	@Test(groups = { "test" })
+	@Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
+	//@Test(groups = { "test" })
 	public void test() {
 		wbd.get(Environment.getInputcheckboxes());
 

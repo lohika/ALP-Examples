@@ -1,2 +1,6 @@
 /.settings
 /target
+/.idea
+/FacebookTesting.iml
+/test-output
+

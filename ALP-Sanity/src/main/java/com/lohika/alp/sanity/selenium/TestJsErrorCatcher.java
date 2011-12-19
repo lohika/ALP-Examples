@@ -47,13 +47,13 @@ public class TestJsErrorCatcher {
 
 	}
 
-	@Test(groups = "jstest")
+    @Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
 	public void testJsExceptionAutoLogging() throws InterruptedException {
 		drv.get(Environment.getJsCatcherEnv());
 		
 	}
 
-	@Test(groups = "jstest")
+    @Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
 	public void testJsExceptionManualy() throws InterruptedException, JsErrorCatcherException {
 		// disable auto logging of js errors
 
