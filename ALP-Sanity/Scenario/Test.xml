@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name='Selenium CheckList'>
 <parameter name="browser"  value="firefox"/>
-<parameter name="platform"  value="LINUX"/>
+<parameter name="platform"  value="WINDOWS"/>
 	<listeners>	
 		 <listener class-name="com.lohika.alp.reporter.Reporter" />
         <listener class-name="com.lohika.alp.reporter.db.DBResultListener" />
+        <listener class-name="com.lohika.alp.mailer.Mailer" />
 	</listeners>	
 	 <groups>
     		<run>
-      		<include name="jstest"/>
+      		<include name="primary.2"/>
     		</run>
   		</groups>
   	

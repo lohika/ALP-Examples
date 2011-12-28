@@ -1,4 +1,5 @@
 /.classpath
+/bin
 /.settings
 /target
 /test-output
