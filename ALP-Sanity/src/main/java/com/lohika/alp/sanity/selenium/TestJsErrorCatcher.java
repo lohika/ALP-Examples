@@ -3,10 +3,10 @@ package com.lohika.alp.sanity.selenium;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 
-import org.apache.log4j.Level;
+import com.lohika.alp.selenium.jscatcher.JsErrorCatcherConfiguration;
+import com.lohika.alp.selenium.jscatcher.JsErrorCatcherException;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,7 +17,6 @@ import org.testng.annotations.Test;
 
 import com.lohika.alp.sanity.utils.Environment;
 import com.lohika.alp.selenium.AlpWebDriverFactory;
-import com.lohika.alp.selenium.configurator.Configuration;
 import com.lohika.alp.selenium.jscatcher.FirefoxJsErrorCathcer;
 import com.lohika.alp.selenium.jscatcher.JSErrorCatcher;
 
@@ -48,16 +47,21 @@ public class TestJsErrorCatcher {
 
 	}
 
-	@Test(groups = "jstest")
+    //@Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
+	@Test(groups = {"test"})
 	public void testJsExceptionAutoLogging() throws InterruptedException {
 		drv.get(Environment.getJsCatcherEnv());
 		
 	}
 
-	@Test(groups = "jstest")
-	public void testJsExceptionManualy() throws InterruptedException {
+    //@Test(groups = { "primary.2" }, dependsOnGroups = { "primary" })
+	@Test(groups = {"test"})
+	public void testJsExceptionManualy() throws InterruptedException, JsErrorCatcherException {
 		// disable auto logging of js errors
-		Configuration.getInstance().setJsErrorAutolog(false);
+
+        JsErrorCatcherConfiguration jsErrCatchConfig = new JsErrorCatcherConfiguration();
+
+        jsErrCatchConfig.setJsErrorAutolog(true);
 
 		drv.get(Environment.getJsCatcherEnv());
 		
@@ -68,7 +72,7 @@ public class TestJsErrorCatcher {
 
 		errors.addAll(jsErrCatcher.getJsErrors());
 		
-		if (errors!=null)
+		if (!errors.isEmpty())
 		for (String error: errors) {
 			Reporter.log(error);
 			log.warn(error);

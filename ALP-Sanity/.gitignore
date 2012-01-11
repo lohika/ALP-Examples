@@ -1,3 +1,8 @@
 /.classpath
+/bin
 /.settings
 /.project
+/target
+/test-output
+/.idea
+/ALP-Sanity.iml

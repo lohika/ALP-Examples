@@ -2,11 +2,9 @@ package com.lohika.alp.sanity.selenium;
 
 import java.net.MalformedURLException;
 
-import org.openqa.selenium.Keyboard;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.Mouse;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.internal.Coordinates;
+import org.openqa.selenium.internal.WrapsElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -51,8 +49,9 @@ public class TestKeyboardMouse {
 
 		Mouse ms = ((LoggingWebDriver) wbd).getMouse();
 
-		ms.doubleClick(((LoggingWebElement) fbb.get_byid_webelement())
-				.getCoordinates());
+        Coordinates cor1 = ((LoggingWebElement)((WrapsElement)fbb.get_byid_webelement()).getWrappedElement()).getCoordinates();
+
+		ms.doubleClick(cor1);
 	}
 
 	@AfterClass(alwaysRun = true)
