@@ -21,20 +21,12 @@ public class LoginBlock {
 	@FindBy (className = "button")
 	private WebElement login_btn_label;
 	
-	@LogDescription (name = "Admin Button", type = "button")
-	@FindBy (id = "dijit_PopupMenuBarItem_4_text")
-	private WebElement admin_btn_label;
 	
-	@LogDescription (name = "Security Button", type = "button")
-	@FindBy (id = "dijit_MenuItem_116_text")
-	private WebElement security_btn_label;
 	
 	   public void madeLogin() {
 		   login_name.sendKeys(Environment.getUsername());
 		   login_pass.sendKeys(Environment.getPass());
-		   login_btn_label.click();
-		   admin_btn_label.click();
-		   security_btn_label.click();
+		   login_btn_label.click();		   
 	   }
 	}
 

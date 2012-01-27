@@ -41,12 +41,9 @@ public class LoginPositive {
 	}
 
 	@Test(groups = "test")
-	public void testLogin() throws InterruptedException {
+	public void testLogin() throws InterruptedException 
+	{
 		
-		loginblock.madeLogin();
-
-
-		
-		
+		loginblock.madeLogin();		
 	}
 }
