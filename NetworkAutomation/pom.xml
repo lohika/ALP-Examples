@@ -35,13 +35,13 @@
   				
 		<dependency>
 			<groupId>com.lohika.alp</groupId>
-			<artifactId>alp-reporter-db</artifactId>
-			<version>0.6</version>
+			<artifactId>alp-reporter</artifactId>
+			<version>0.7</version>
 		</dependency>
 	<dependency>
 			<groupId>com.lohika.alp</groupId>
 			<artifactId>alp-selenium</artifactId>
-			<version>0.6</version>
+			<version>0.7</version>
 		</dependency>
 	</dependencies>  
 </project>
