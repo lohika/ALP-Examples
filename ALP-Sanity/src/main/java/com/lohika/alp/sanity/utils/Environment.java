@@ -9,6 +9,7 @@ public class Environment {
 	private static String forms1 = "http://www.htmldog.com/examples/select1.html";
 	private static String forms2 = "http://www.htmldog.com/examples/textarea.html";
 	private static String jsCatcherEnv = "http://lohika.github.com/ALP/test";
+	private static String	flexEnv = "http://lohika.github.com/ALP/test/fp/index.html";
 	
 	public static String getJsCatcherEnv() {
 		return jsCatcherEnv;
@@ -36,6 +37,10 @@ public class Environment {
 
 	public static String getforms2() {
 		return forms2;
+	}
+
+	public static String getEnvUrl() {		
+		return flexEnv;
 	}
 
 }

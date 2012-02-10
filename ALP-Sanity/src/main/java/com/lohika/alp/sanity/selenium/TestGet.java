@@ -19,15 +19,15 @@ import com.lohika.alp.selenium.AlpWebDriverFactory;
 public class TestGet {
 
 	public WebDriver wbd;
-	public Logger lg;
+	public Logger lg = Logger.getLogger(TestGet.class);
 
 	@Parameters({ "browser", "platform" })
 	@BeforeClass(alwaysRun = true)
 	public void before(String browser, String platform)
 			throws MalformedURLException {
-		lg = Logger.getLogger(getClass().toString());
 		DesiredCapabilities cap = new DesiredCapabilities(browser, "",
 				Platform.valueOf(platform));
+		lg.info("test");
 		wbd = AlpWebDriverFactory.getDriver(Environment.getHubURL(), cap);
 	}
 

@@ -9,7 +9,7 @@
 	</listeners>	
 	 <groups>
     		<run>
-      		<include name="primary.2"/>
+      		<include name="primary"/>
     		</run>
   		</groups>
   	
