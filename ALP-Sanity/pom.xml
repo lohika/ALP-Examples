@@ -3,14 +3,7 @@
   <groupId>com.lohika.alp</groupId>
   <artifactId>ALP-Sanity</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>ALP-Sanity</name>
-  <repositories>		
-		<repository>
-		  <id>alp-repo</id>
-		  <name>ALP repository on GitHub</name>
-		  <url>http://lohika.github.com/ALP/repo/releases/</url>
-		</repository>		
-	</repositories>
+  <name>ALP-Sanity</name>  
 
 	<dependencies>			
 		<dependency>
